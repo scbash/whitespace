@@ -25,6 +25,10 @@ module.exports =
       type: 'boolean'
       default: true
       description: 'If the buffer doesn\'t end with a newline charcter when it\'s saved, then append one. If it ends with more than one newline, remove all but one. To disable/enable for a certain language, use [syntax-scoped properties](https://github.com/atom/whitespace#readme) in your `config.cson`.'
+    onlyFixEditedLines:
+      type: 'boolean'
+      default: false # for now...
+      description: 'Only apply whitespace fixes to lines that the user edited.'
 
   activate: ->
     @whitespace = new Whitespace()
